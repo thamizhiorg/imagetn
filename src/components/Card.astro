@@ -7,7 +7,7 @@ interface Props {
   const { title, url } = Astro.props;
 ---
   
-<a href={url} target="_self">
+<a href={url} download>
   <img src={title} class="thumbnail" alt="" />
 </a>
 
