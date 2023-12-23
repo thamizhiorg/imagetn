@@ -11,7 +11,7 @@ const allImages = await Astro.glob("../content/images/*.md");
 			allImages.map((images) =>(
 			<Card
 				title={images.frontmatter.title}
-				alt=""
+				alt={images.frontmatter.alt}
 			/>
 			))
 		}
