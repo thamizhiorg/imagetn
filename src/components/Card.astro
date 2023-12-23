@@ -1,12 +1,16 @@
 ---
 interface Props {
 	title: string;
+  url: string;
 	 }
   
-  const { title } = Astro.props;
+  const { title, url } = Astro.props;
 ---
   
-<img src={title} class="thumbnail" />
+<a href={url} target="_self">
+  <img src={title} class="thumbnail" alt="" />
+</a>
+
 <style>
 .thumbnail {
     width: 300px;
