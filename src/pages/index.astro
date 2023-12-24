@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 
 const allImages = await Astro.glob("../content/images/*.md");
 ---
-
+<Header />
 <Layout title="Thalaivar">
 	<main>
 		{
@@ -17,13 +19,13 @@ const allImages = await Astro.glob("../content/images/*.md");
 		}
 	</main>
 </Layout>
+<Footer />
 
 <style>
 	main {
 		margin: auto;
 		padding: 1rem;
 		width: 100%;
-		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
